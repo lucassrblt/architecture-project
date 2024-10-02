@@ -5,7 +5,7 @@ services:
     image: v1
     build:
       context: ./client
-      dockerfile: ./client/dockerfile
+      dockerfile: dockerfile
     container_name: frontend
     ports:
       - "3000:3000"
