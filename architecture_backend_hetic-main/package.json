@@ -1,0 +1,19 @@
+{
+  "name": "my-replicate-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A starter for testing out Replicate's API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1691.0",
+    "dotenv": "^16.4.1",
+    "fs": "^0.0.1-security",
+    "image-downloader": "^4.3.0",
+    "replicate": "*",
+    "uuid": "^10.0.0"
+  }
+}
