@@ -3,6 +3,7 @@ import Replicate from "replicate";
 import bodyParser from "body-parser";
 import { request } from "express";
 import fs from "fs";
+import cors from "cors";
 import AWS from "aws-sdk";
 import dotenv from "dotenv";
 import { v4 as uuidv4 } from "uuid";
@@ -25,6 +26,7 @@ const s3 = new AWS.S3();
 const bucketName = "replicateimage";
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post("/", async (req, res) => {
   const { prompt } = req.body;
@@ -78,6 +80,7 @@ app.post("/", async (req, res) => {
 
 app.get("/images", async (req, res) => {
   try {
+    console.log("Récupération des images");
     const params = { Bucket: bucketName };
     const data = await s3.listObjectsV2(params).promise(); //Récupère la iste des objets stockés dans le bucket
 

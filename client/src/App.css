@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  overflow-x: hidden;
 }
 
 input {
@@ -18,6 +19,42 @@ input {
   justify-content: center;
   gap: 1em;
   margin-bottom: 1em;
+}
+
+.loading-text {
+  animation: text-fade 2s ease-in-out infinite, text-glow 2s ease-in-out infinite;
+}
+
+@keyframes text-fade {
+  0%, 100% {
+    color: white;
+  }
+  50% {
+    color: grey;
+  }
+}
+
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #f3b7b7, 0 0 55px #ffc4c6, 0 0 75px #ffc8c8;
+  }
+  50% {
+    text-shadow: none;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.generated-img {
+  height: auto;
+  width: 50%;
+}
+
+button {
+  margin-bottom: 1.5em;
 }
 
 .logo {
@@ -54,4 +91,32 @@ input {
 
 .read-the-docs {
   color: #888;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+.images-container img {
+  max-width: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+
+}
+.images-container img:hover {
+  filter: drop-shadow(0 0 1em #646cffaa);
+}
+
+#webgl {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
