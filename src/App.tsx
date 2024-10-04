@@ -2,7 +2,6 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import loadingsvg from './loading.json';
 import Lottie from "lottie-react";
-import { div } from 'three/webgpu';
 
 function App() {
   const [prompt, setPrompt] = useState('');
