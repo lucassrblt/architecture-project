@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  backend:
+    image: v2
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    container_name: backend
+    ports:
+      - "8080:3001"
