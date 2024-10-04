@@ -1,0 +1,23 @@
+{
+    "name": "Replica",
+    "short_name": "Replica",
+    "description": "Une application React pour la creation dimages avec l'ia de stylegan2",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "scope": "/",
+    "icons": [
+      {
+        "src": "logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
