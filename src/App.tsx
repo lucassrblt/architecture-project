@@ -33,7 +33,7 @@ function App() {
 
   const getImages = async (): Promise<string> => {
     // console.log('getImages');
-    const response = await fetch(`http://52.47.184.9/images`, {
+    const response = await fetch(`https://architecture-project.onrender.com/images`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function App() {
   };
   const generateImageFromPrompt = async (prompt: string): Promise<string> => {
     console.log('prompt', prompt);
-    const response = await fetch(`http://52.47.184.9`, {
+    const response = await fetch(`https://architecture-project.onrender.com/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
